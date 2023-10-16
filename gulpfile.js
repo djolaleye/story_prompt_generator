@@ -11,7 +11,7 @@ const browsersync = require('browser-sync').create();
 
 // Sass Task
 function scssTask() {
-    return src('public/styles/styles.scss', {sourcemaps: true}) 
+    return src('scss/styles.scss', {sourcemaps: true}) 
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest('dist', {sourcemaps: '.'}));
@@ -29,7 +29,7 @@ function jsTask() {
 function browserSyncServe(cb) {
     browsersync.init({
         server: {
-            baseDir: './views',
+            baseDir: ['views', 'dist']
         },
         notify: {
             styles: {
@@ -50,7 +50,7 @@ function browserSyncReload(cb) {
 function watchTask() {
     watch('*.html', browserSyncReload);
     watch(
-        ['public/styles/**/*.scss', 'js/**/*.js'],
+        ['scss/**/*.scss', 'js/**/*.js'],
         series (scssTask, jsTask, browserSyncReload)
     );
 }

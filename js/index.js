@@ -7,7 +7,6 @@ const app = express();
 const port = 3000;
 
 
-app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true}));
 
 app.set('views', rootDir + '/views');
@@ -30,9 +29,3 @@ app.listen(port, () => {
 })
 
 
-// Footer
-$(function(){
-    let year = new Date().getFullYear();
-    $('#copyright_year').append(year);
-
-});
