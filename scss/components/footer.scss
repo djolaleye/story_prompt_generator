@@ -1,0 +1,13 @@
+@use '../util/' as *;
+
+footer  {
+    position: absolute;
+    top: 96%;
+    width: 96%;
+
+    p {
+        text-align: center;
+        color: var(--tertiary-color);
+        font-size: rem(10);
+    }
+}

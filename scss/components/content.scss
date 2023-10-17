@@ -1,0 +1,74 @@
+@use '../util/' as *;
+
+.container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    align-items: center;
+}
+
+#bckgrd_text {
+    flex: 1 1 auto;
+    margin-top: rem(40);
+    margin-bottom: rem(200);
+
+    p {
+        color: var(--primary-color);
+        font-size: rem(36);
+        font-weight: 500;
+    }
+}
+
+
+
+#sggstn_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 auto;
+}
+
+.top, .bottom {
+    display: inline;
+    margin: rem(5);
+
+    button {
+        height: rem(60);
+        width: rem(300);
+        background-color: white;
+        color: var(--secondary-color);
+        border: rem(1) solid var(--primary-color);
+        border-radius: rem(25);
+        font-weight: bold;
+
+        transition: background-color 0.4s;
+    }
+
+    button:hover {
+        background-color: var(--secondary-color);
+        color: white;
+    }
+}
+
+
+#prompt {
+    flex: 0 1 rem(80);
+
+    button {
+        height: rem(60);
+        width: rem(600);
+        background-color: var(--primary-color);
+        color: white;
+        border: rem(1) solid var(--primary-color);
+        border-radius: rem(25);
+        font-size: rem(22);
+        font-weight: bold;
+
+        transition: background-color 0.4s;
+    }
+
+    button:hover {
+        background-color: var(--secondary-color);
+    }
+}
+

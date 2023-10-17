@@ -1,5 +1,12 @@
+@use '../util' as *;
+
 body {
-    background:  var(--primary-color);
+    background:  white;
+    margin-top: rem(80);
+    padding: rem(30);
+    height: 100vh;
+    font-family: var(--poppins);
+    overflow: hidden;
 }
 
 a:link {
@@ -13,9 +20,12 @@ a:visited {
 
 a:hover {
     text-decoration: none;
-    /* color: var(--nav-text); */
+    color: white;
+    font-size: rem(18); 
 }
 
 a:active {
     text-decoration: none;
+    color: white;
+    font-size: rem(18); 
 }
